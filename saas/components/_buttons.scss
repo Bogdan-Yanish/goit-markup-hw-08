@@ -1,0 +1,50 @@
+.button--order {
+    @extend %button;
+    padding-top: 10px;
+    padding-left: 32px;
+    padding-right: 32px;
+    padding-bottom: 10px;
+}
+
+.button--subscribe {
+    @extend %button;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 10px 2px;
+}
+
+.button--send {
+    @extend %button;
+
+    display: block;
+    margin: auto;
+}
+
+.button--close {
+    position: absolute;
+    right: 8px;
+    top: 8px;
+
+    width: 30px;
+    height: 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: fill $animation;
+
+    background-color: $white-color;
+    background-size: contain;
+
+    border: 1px solid #0000001A;
+    border-radius: 50%;
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+        fill: $accent-color;
+    }
+}

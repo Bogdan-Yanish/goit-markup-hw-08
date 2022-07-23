@@ -1,0 +1,120 @@
+.footer {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: $baner-color;
+}
+
+.contact__address {
+    margin-top: 20px;
+
+    color: $white-color;
+
+    font-style: normal;
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+}
+
+.contact__list {
+    margin-top: 9px;
+}
+
+.contact__link {
+    transition: color $animation;
+
+    color: $primary-text-color;
+
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+        color: $accent-color;
+        }
+}
+
+.contact__item:not(:first-child) {
+    margin-top: 9px;
+}
+
+.footer__container {
+    display: flex;
+    align-items: baseline;
+}
+
+.join__wrap {
+    display: flex;
+    flex-direction: column;
+    margin-left: 70px;
+}
+
+.join__title {
+    margin-bottom: 20px;
+
+    color: $white-color;
+
+    font-family: 'Roboto';
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+}
+
+.subscribe__wrap {
+    margin-left: auto;
+}
+
+.subscribe__title {
+    display: block;
+    margin-bottom: 20px;
+
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+
+    color: $white-color;
+}
+
+.subscribe__form {
+    display: flex;
+    gap: 12px;
+}
+.subscribe__input {
+    width: 358px;
+    padding-left: 16px;
+    padding-top: 14px;
+    padding-bottom: 14px;
+    
+    background-color: inherit;
+    color: rgba(255, 255, 255, 0.6);
+
+    font-weight: 400;
+    line-height: 1.25;
+    letter-spacing: 0.03em;
+
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+    border-radius: 4px;
+
+    &:focus {
+        outline: none;
+    }
+
+    &::placeholder {
+        font-weight: 400;
+        line-height: 1.25;
+        letter-spacing: 0.03em;
+    
+        color: inherit
+    }
+}
+
+.subscribe__icon {
+    fill: $white-color;
+    margin-left: 16px;
+}

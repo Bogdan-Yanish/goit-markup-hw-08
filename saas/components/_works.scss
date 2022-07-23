@@ -1,0 +1,43 @@
+.work {
+    padding-top: 47px;
+}
+
+.work__title {
+    @extend %title;
+}
+
+.work__list {
+    display: flex;
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.work__item {
+    flex-basis: calc((100% - 30px * (3 - 1)) / 3);
+}
+
+.work__wrap {
+    position: relative;
+}
+
+.work__img {
+    vertical-align: top;
+}
+
+.work__text {
+    position: absolute;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    padding: 27px 0;
+
+    color: $white-color;
+    background-color: #2F303ACC;
+
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 1.14;
+    text-align: center;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+}
