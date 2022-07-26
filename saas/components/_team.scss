@@ -1,53 +1,74 @@
 .team {
-    background-color: $button-color;
+  background-color: $button-color;
 }
 
 .team__title {
-    @extend %title;    
+  @extend %title;
 }
 
 .team__list {
+  margin-top: 30px;
+
+  @include mq(tablet) {
     display: flex;
+    flex-wrap: wrap;
     gap: 30px;
+  }
+
+  @include mq(desktop) {
     margin-top: 50px;
+    flex-wrap: nowrap;
+  }
 }
 
 .team__item {
-    flex-basis: calc((100% - 30px * (4 - 1)) / 4);
+  background-color: $white-color;
 
-    background-color: $white-color;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
 
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
-    border-radius: 0px 0px 4px 4px;
+  @media screen and (max-width: 767px) {
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+
+  @include mq(tablet) {
+    flex-basis: calc((100% - 30px * (2 - 1)) / 2);
+  }
 }
 
-
 .team__img {
-    display: block;
+  margin: auto;
 }
 
 .team__wrap {
-    padding-top: 30px;
+  padding-top: 30px;
+  padding-bottom: 24px;
+
+  @include mq(desktop) {
     padding-bottom: 30px;
+  }
 }
 
 .team__name {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 
-    color: $title-text-color;
+  color: $title-text-color;
 
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 1.19;
-    letter-spacing: 0.03em;
-    text-align: center;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+  text-align: center;
 }
 
 .team__position {
-    margin-bottom: 16px;
+  margin-bottom: 16px;
 
-    font-size: 16px;
-    line-height: 1.19;
-    letter-spacing: 0.03em;
-    text-align: center;
+  font-size: 16px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+  text-align: center;
 }

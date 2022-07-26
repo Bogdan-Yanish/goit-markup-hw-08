@@ -1,8 +1,8 @@
 @import './utils/variables';
 @import './utils/reset-style';
+@import './utils/mixins';
 @import './utils/layout';
 @import './utils/placeholders';
-@import './utils/mixins';
 @import './components/buttons';
 @import './components/logo';
 @import './components/header';
@@ -16,4 +16,4 @@
 @import './components/portfolio-cards';
 @import './components/footer';
 @import './components/popup';
-@import './components/popup-form'
+@import './components/popup-form';

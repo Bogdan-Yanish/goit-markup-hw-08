@@ -1,55 +1,77 @@
 .benefits {
+  @include mq(desktop) {
     padding-bottom: 47px;
+  }
 }
 
 .benefits__wrap {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
 
-    min-height: 120px;
+  min-height: 120px;
 
-    border-radius: 4px;
-    border: transparent;
+  border-radius: 4px;
+  border: transparent;
 
-    background-color: $button-color;
+  background-color: $button-color;
 }
 
 .benefits__icon {
-    width: 70px;
-    height: 70px;
+  width: 70px;
+  height: 70px;
 
-    color: $title-text-color;
+  color: $title-text-color;
 }
 
 .benefits__list {
+  @include mq(tablet) {
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
+  }
+
+  @include mq(desktop) {
+    flex-wrap: nowrap;
+  }
 }
 
 .benefits__item {
-   flex-basis: calc((100% - 30px * (4 - 1)) / 4);
-    
-    padding-left: 5px;
-    padding-right: 5px;
+  &:not(:last-child) {
+    margin-bottom: 30px;
+  }
+
+  @include mq(tablet) {
+    flex-basis: calc((100% - 30px * (2 - 1)) / 2);
+  }
 }
 
 .benefits__subtitle {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
+  padding-left: 5px;
+  padding-right: 5px;
 
-    color: $title-text-color;
+  color: $title-text-color;
 
-    font-weight: 700;
-    font-size: 14px;
-    line-height: 1.14;
-    letter-spacing: 0.03em;
-    text-transform: uppercase;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+
+  text-align: center;
+
+  @include mq(desktop) {
+    text-align: left;
+  }
 }
 
 .benefits__text {
-    font-size: 14px;
-    line-height: 1.71;
-    letter-spacing: 0.03em;
+  padding-left: 5px;
+  padding-right: 5px;
+
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
 }
