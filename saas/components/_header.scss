@@ -1,13 +1,10 @@
 .header {
-  // padding-top: 16px;
+  position: relative;
   border-bottom: 1px solid #ececec;
   background-color: $white-color;
 }
 
 .header__container {
-  @media screen and (max-width: 767px) {
-    position: relative;
-  }
   @include mq(tablet) {
     display: flex;
     align-content: center;
@@ -28,12 +25,17 @@
   padding: 0;
   border: none;
   background-color: transparent;
+
+  @include mq(tablet) {
+    display: none;
+  }
 }
 
 .menu__icon-close {
   display: none;
   .button__menu.is-open & {
     display: block;
+    fill: $accent-color;
   }
 }
 
@@ -41,9 +43,49 @@
   display: none;
 }
 
+.buton__menu:hover + .menu__icon-open {
+  fill: $accent-color;
+}
+
 .menu__content {
   @media screen and (max-width: 767px) {
-    padding-left: 40px;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+
+    display: none;
+    padding: 48px 40px;
+
+    background-color: $white-color;
+
+    overflow-y: scroll;
+
+    &.is-open {
+      display: block;
+    }
+  }
+
+  @include mq(tablet) {
+    display: flex;
+    align-items: center;
+  }
+}
+
+.button__menu-close {
+  position: fixed;
+  right: 25px;
+  top: 21px;
+
+  display: inline-flex;
+  padding: 0;
+
+  border: none;
+  background-color: transparent;
+
+  @include mq(tablet) {
+    display: none;
   }
 }
 
@@ -57,6 +99,10 @@
 .main-nav__list {
   @include mq(tablet) {
     display: flex;
+    margin-left: 88px;
+  }
+
+  @include mq(desktop) {
     margin-left: 93px;
   }
 }
@@ -118,21 +164,31 @@
 
 .auth-nav {
   @media screen and (max-width: 767px) {
-    margin-top: 302px;
+    margin-top: 286px;
+    margin-bottom: 16px;
   }
   @include mq(tablet) {
     display: flex;
-    margin-left: auto;
+    flex-direction: column-reverse;
+    margin-left: 90px;
+    gap: 12px;
+  }
+
+  @include mq(desktop) {
+    flex-direction: row-reverse;
+    margin-left: 315px;
+    gap: 30px;
     align-items: center;
-    justify-content: center;
   }
 }
 
 .auth-nav__link {
+  display: block;
   color: inherit;
   transition: color $animation;
   font-weight: 500;
   letter-spacing: 0.02em;
+  text-decoration: none;
 
   @media screen and (max-width: 767px) {
     padding-top: 16px;
@@ -140,12 +196,22 @@
 
     font-size: 24px;
     line-height: 1.14;
-    text-decoration: none;
   }
 
   @include mq(tablet) {
+    display: flex;
+
+    font-size: 12px;
+    line-height: 1.17;
+  }
+
+  @include mq(desktop) {
     display: inline-flex;
     align-items: center;
+    padding-top: 32px;
+    padding-bottom: 32px;
+
+    font-size: 14px;
   }
 
   &:hover,
@@ -154,7 +220,7 @@
   }
 }
 
-.tel {
+.auth__tel {
   @media screen and (max-width: 767px) {
     width: 100%;
     font-weight: 500;
@@ -176,6 +242,43 @@
   fill: currentColor;
 }
 
-.auth-nav__item:not(:last-child) {
-  margin-right: 30px;
+.menu__socials {
+  @media screen and (max-width: 767px) {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  @include mq(tablet) {
+    display: none;
+  }
+}
+.menu__item:not(:last-child) {
+  @media screen and (max-width: 767px) {
+    border-right: 1px solid rgba(33, 33, 33, 0.2);
+    height: 22px;
+    padding-right: 10px;
+  }
+}
+
+.menu__item:not(:first-child) {
+  @media screen and (max-width: 767px) {
+    padding-left: 10px;
+  }
+}
+
+.menu__link {
+  @media screen and (max-width: 767px) {
+    display: inline-block;
+
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 1.22;
+    letter-spacing: 0.02em;
+    text-decoration: none;
+
+    color: $accent-color;
+
+    &:not(:last-child) {
+      padding-top: 15px;
+    }
+  }
 }

@@ -31,16 +31,21 @@
             <button
               class="button button__menu is-open"
               aria-expanded="false"
+              aria-controls="menu"
               type="button"
-              data-menu-button
+              data-menu-open
             >
-              <svg width="40" height="40" aria-label="Перемикач меню">
-                <use class="menu__icon-close" href="./images/icons.svg#icon-close"></use>
-                <use class="menu__icon-open" href="./images/icons.svg#icon-menu-open"></use>
+              <svg width="40" height="40">
+                <use class="menu__icon-open-menu" href="./images/icons.svg#icon-open-menu"></use>
               </svg>
             </button>
           </div>
-          <div class="menu__content">
+          <div class="menu__content" id="menu" data-menu>
+            <button class="button button__menu-close" type="button" data-menu-close>
+              <svg width="40" height="40">
+                <use class="menu__icon-close-menu" href="./images/icons.svg#icon-close-menu"></use>
+              </svg>
+            </button>
             <nav class="main-nav"></nav>
               <ul class="main-nav__list">
                 <li class="main-nav__item">
@@ -57,12 +62,11 @@
           
             <ul class="auth-nav">
               <li class="auth-nav__item">
-                <a class="auth-nav__link tel" href="tel:+380961111111">
+                <a class="auth-nav__link auth__tel" href="tel:+380961111111">
                   <svg class="auth-nav__icon" width="10px" height="16px">
                     <use href="./images/icons.svg#icon-phone"></use>
                   </svg>
                   +38 096 111 11 11
-              
                 </a>
               </li>
               <li class="auth-nav__item">
@@ -74,8 +78,22 @@
                 </a>
               </li>
             </ul>
+            <ul class="menu__socials">
+              <li class="menu__item">
+                <a class="menu__link" href="#">Instagram </a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="#">Twitter </a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="#">Facebook </a>
+              </li>
+              <li class="menu__item">
+                <a class="menu__link" href="#">Linkedin </a>
+              </li>
+            </ul>
           </div>
-      </div>
+        </div>
     </header>
 
     <main>
