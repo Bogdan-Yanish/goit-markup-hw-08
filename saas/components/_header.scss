@@ -35,16 +35,11 @@
   display: none;
   .button__menu.is-open & {
     display: block;
-    fill: $accent-color;
   }
 }
 
 .button__menu.is-open .menu__icon-open {
   display: none;
-}
-
-.buton__menu:hover + .menu__icon-open {
-  fill: $accent-color;
 }
 
 .menu__content {
@@ -64,7 +59,8 @@
     overflow: auto;
 
     &.is-open {
-      display: block;
+      display: flex;
+      flex-direction: column;
     }
   }
 
@@ -165,7 +161,7 @@
 
 .auth-nav {
   @media screen and (max-width: 767px) {
-    margin-top: 64px;
+    margin-top: auto;
     margin-bottom: 64px;
   }
   @include mq(tablet) {
@@ -222,10 +218,17 @@
 }
 
 .auth__tel {
+  @media screen and (max-width: 380px) {
+    font-size: 27px;
+  }
+
+  @media (min-width: 381px) and (max-width: 767px) {
+    font-size: 34px;
+  }
+
   @media screen and (max-width: 767px) {
     width: 100%;
     font-weight: 500;
-    font-size: 34px;
     line-height: 1.18;
     letter-spacing: 0.02em;
 

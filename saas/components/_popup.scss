@@ -41,7 +41,7 @@
     opacity: 0;
   }
 
-  @include mq(mobile) {
+  @media screen and (min-width: 480px) {
     width: 90%;
   }
 }

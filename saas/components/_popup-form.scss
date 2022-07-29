@@ -99,6 +99,10 @@
 
   text-align: center;
 
+  @media screen and (max-width: 479px) {
+    width: 200px;
+  }
+
   @media screen and (max-width: 767px) {
     font-size: 12px;
   }
@@ -118,7 +122,7 @@
 
   fill: $title-text-color;
 
-  @media screen and (max-width: 500px) {
+  @media screen and (max-width: 767px) {
     left: 0;
   }
 }
@@ -134,10 +138,9 @@
 
   transition: opacity $animation;
 
-  @media screen and (max-width: 500px) {
+  @media screen and (max-width: 767px) {
     left: 0;
   }
-
   .agree__checkbox:checked ~ & {
     opacity: 1;
   }
