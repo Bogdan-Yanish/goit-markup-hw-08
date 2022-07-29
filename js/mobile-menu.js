@@ -4,7 +4,7 @@
 //   const BodyRef = document.querySelector("body");
 //   MenuBtnRef.addEventListener("click", () => {
 //     const expanded =
-//       MenuBtnRef.getAttribute("aria-expanded") === "true" || false;
+//     MenuBtnRef.getAttribute("aria-expanded") === "true" || false;
 //     MenuBtnRef.classList.toggle("is-open");
 //     MenuBtnRef.setAttribute("aria-expanded", !expanded);
 //     MobileMenuRef.classList.toggle("is-open");
