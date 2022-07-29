@@ -24,76 +24,75 @@
     <!--Site navigation-->
     <header class="header">
       <div class="container header__container">
-          <div class="menu">
-            <a href="./index.html" class="logo">
-              Web<span class="logo__text--black">Studio</span>
-            </a>
-            <button
-              class="button button__menu is-open"
-              aria-expanded="false"
-              aria-controls="menu"
-              type="button"
-              data-menu-open
-            >
-              <svg width="40" height="40">
-                <use class="menu__icon-open-menu" href="./images/icons.svg#icon-open-menu"></use>
-              </svg>
-            </button>
-          </div>
-          <div class="menu__content" id="menu" data-menu>
-            <button class="button button__menu-close" type="button" data-menu-close>
-              <svg width="40" height="40">
-                <use class="menu__icon-close-menu" href="./images/icons.svg#icon-close-menu"></use>
-              </svg>
-            </button>
-            <nav class="main-nav"></nav>
-              <ul class="main-nav__list">
-                <li class="main-nav__item">
-                  <a class="main-nav__link" href="./index.html">Студія</a>
-                </li>
-                <li class="main-nav__item">
-                  <a class="main-nav__link main-nav__link--active" href="./portfolio.html">Портфоліо</a>
-                </li>
-                <li class="main-nav__item">
-                  <a class="main-nav__link" href="">Контакти</a>
-                </li>
-              </ul>
-            </nav>
-          
-            <ul class="auth-nav">
-              <li class="auth-nav__item">
-                <a class="auth-nav__link auth__tel" href="tel:+380961111111">
-                  <svg class="auth-nav__icon" width="10px" height="16px">
-                    <use href="./images/icons.svg#icon-phone"></use>
-                  </svg>
-                  +38 096 111 11 11
-                </a>
-              </li>
-              <li class="auth-nav__item">
-                <a class="auth-nav__link" href="mailto:info@devstudio.com">
-                  <svg class="auth-nav__icon" width="16px" height="12px">
-                    <use href="./images/icons.svg#icon-mail"></use>
-                  </svg>
-                  info@devstudio.com
-                </a>
-              </li>
-            </ul>
-            <ul class="menu__socials">
-              <li class="menu__item">
-                <a class="menu__link" href="#">Instagram </a>
-              </li>
-              <li class="menu__item">
-                <a class="menu__link" href="#">Twitter </a>
-              </li>
-              <li class="menu__item">
-                <a class="menu__link" href="#">Facebook </a>
-              </li>
-              <li class="menu__item">
-                <a class="menu__link" href="#">Linkedin </a>
-              </li>
-            </ul>
-          </div>
+        <div class="menu">
+          <a href="./index.html" class="logo"> Web<span class="logo__text--black">Studio</span> </a>
+          <button
+            class="button button__menu js-open-menu"
+            aria-expanded="false"
+            aria-controls="menu"
+            type="button"
+          >
+            <svg width="40" height="40">
+              <use class="menu__icon-open-menu" href="./images/icons.svg#icon-open-menu"></use>
+            </svg>
+          </button>
         </div>
+        <div class="menu__content js-menu-container" id="menu">
+          <button class="button button__menu-close js-close-menu" type="button">
+            <svg width="40" height="40">
+              <use class="menu__icon-close-menu" href="./images/icons.svg#icon-close-menu"></use>
+            </svg>
+          </button>
+          <nav class="main-nav">
+            <ul class="main-nav__list">
+              <li class="main-nav__item">
+                <a class="main-nav__link" href="./index.html">Студія</a>
+              </li>
+              <li class="main-nav__item">
+                <a class="main-nav__link main-nav__link--active" href="./portfolio.html"
+                  >Портфоліо</a
+                >
+              </li>
+              <li class="main-nav__item">
+                <a class="main-nav__link" href="">Контакти</a>
+              </li>
+            </ul>
+          </nav>
+
+          <ul class="auth-nav">
+            <li class="auth-nav__item">
+              <a class="auth-nav__link auth__tel" href="tel:+380961111111">
+                <svg class="auth-nav__icon" width="10px" height="16px">
+                  <use href="./images/icons.svg#icon-phone"></use>
+                </svg>
+                +38 096 111 11 11
+              </a>
+            </li>
+            <li class="auth-nav__item">
+              <a class="auth-nav__link" href="mailto:info@devstudio.com">
+                <svg class="auth-nav__icon" width="16px" height="12px">
+                  <use href="./images/icons.svg#icon-mail"></use>
+                </svg>
+                info@devstudio.com
+              </a>
+            </li>
+          </ul>
+          <ul class="menu__socials">
+            <li class="menu__item">
+              <a class="menu__link" href="#">Instagram </a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="#">Twitter </a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="#">Facebook </a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="#">Linkedin </a>
+            </li>
+          </ul>
+        </div>
+      </div>
     </header>
 
     <main>
@@ -123,11 +122,14 @@
             <li class="portfolio__item">
               <a class="portfolio__link" href="">
                 <div class="portfolio__inner">
-                  <img 
-                  class="portfolio__img" 
-                  srcset="./images/portfolio/portfolio-1.jpg 1x, ./images/portfolio/portfolio-1-2x.jpg 2x"
-                  src="./images/portfolio/portfolio-1.jpg" 
-                  alt="Сайт Технокряк" 
+                  <img
+                    class="portfolio__img"
+                    srcset="
+                      ./images/portfolio/portfolio-1.jpg    1x,
+                      ./images/portfolio/portfolio-1-2x.jpg 2x
+                    "
+                    src="./images/portfolio/portfolio-1.jpg"
+                    alt="Сайт Технокряк"
                   />
                   <p class="portfolio__overlay">
                     Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
@@ -147,8 +149,11 @@
                 <div class="portfolio__inner">
                   <img
                     class="portfolio__img"
-                    srcset="./images/portfolio/portfolio-2.jpg 1x, ./images/portfolio/portfolio-2-2x.jpg 2x"
-                    src="./images/portfolio/portfolio-2.jpg" 
+                    srcset="
+                      ./images/portfolio/portfolio-2.jpg    1x,
+                      ./images/portfolio/portfolio-2-2x.jpg 2x
+                    "
+                    src="./images/portfolio/portfolio-2.jpg"
                     alt="Баскетбол"
                   />
                   <p class="portfolio__overlay">
@@ -169,8 +174,11 @@
                 <div class="portfolio__inner">
                   <img
                     class="portfolio__img"
-                    srcset="./images/portfolio/portfolio-3.jpg 1x, ./images/portfolio/portfolio-3-2x.jpg 2x"
-                    src="./images/portfolio/portfolio-3.jpg" 
+                    srcset="
+                      ./images/portfolio/portfolio-3.jpg    1x,
+                      ./images/portfolio/portfolio-3-2x.jpg 2x
+                    "
+                    src="./images/portfolio/portfolio-3.jpg"
                     alt="Ресторан"
                   />
                   <p class="portfolio__overlay">
@@ -191,8 +199,11 @@
                 <div class="portfolio__inner">
                   <img
                     class="portfolio__img"
-                    srcset="./images/portfolio/portfolio-4.jpg 1x, ./images/portfolio/portfolio-4-2x.jpg 2x"
-                    src="./images/portfolio/portfolio-4.jpg" 
+                    srcset="
+                      ./images/portfolio/portfolio-4.jpg    1x,
+                      ./images/portfolio/portfolio-4-2x.jpg 2x
+                    "
+                    src="./images/portfolio/portfolio-4.jpg"
                     alt="Навушники"
                   />
                   <p class="portfolio__overlay">
@@ -211,11 +222,14 @@
             <li class="portfolio__item">
               <a class="portfolio__link" href="">
                 <div class="portfolio__inner">
-                  <img 
-                  class="portfolio__img" 
-                  srcset="./images/portfolio/portfolio-5.jpg 1x, ./images/portfolio/portfolio-5-2x.jpg 2x"
-                  src="./images/portfolio/portfolio-5.jpg" 
-                  alt="Коробки" 
+                  <img
+                    class="portfolio__img"
+                    srcset="
+                      ./images/portfolio/portfolio-5.jpg    1x,
+                      ./images/portfolio/portfolio-5-2x.jpg 2x
+                    "
+                    src="./images/portfolio/portfolio-5.jpg"
+                    alt="Коробки"
                   />
                   <p class="portfolio__overlay">
                     Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
@@ -235,8 +249,11 @@
                 <div class="portfolio__inner">
                   <img
                     class="portfolio__img"
-                    srcset="./images/portfolio/portfolio-6.jpg 1x, ./images/portfolio/portfolio-6-2x.jpg 2x"
-                    src="./images/portfolio/portfolio-6.jpg" 
+                    srcset="
+                      ./images/portfolio/portfolio-6.jpg    1x,
+                      ./images/portfolio/portfolio-6-2x.jpg 2x
+                    "
+                    src="./images/portfolio/portfolio-6.jpg"
                     alt="Монітор"
                   />
                   <p class="portfolio__overlay">
@@ -255,11 +272,14 @@
             <li class="portfolio__item">
               <a class="portfolio__link" href="">
                 <div class="portfolio__inner">
-                  <img 
-                  class="portfolio__img"
-                  srcset="./images/portfolio/portfolio-7.jpg 1x, ./images/portfolio/portfolio-7-2x.jpg 2x"
-                  src="./images/portfolio/portfolio-7.jpg"
-                  alt="Журнал" 
+                  <img
+                    class="portfolio__img"
+                    srcset="
+                      ./images/portfolio/portfolio-7.jpg    1x,
+                      ./images/portfolio/portfolio-7-2x.jpg 2x
+                    "
+                    src="./images/portfolio/portfolio-7.jpg"
+                    alt="Журнал"
                   />
                   <p class="portfolio__overlay">
                     Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
@@ -277,11 +297,14 @@
             <li class="portfolio__item">
               <a class="portfolio__link" href="">
                 <div class="portfolio__inner">
-                  <img 
-                  class="portfolio__img" 
-                  srcset="./images/portfolio/portfolio-8.jpg 1x, ./images/portfolio/portfolio-8-2x.jpg 2x"
-                  src="./images/portfolio/portfolio-8.jpg"
-                  alt="Бірка" 
+                  <img
+                    class="portfolio__img"
+                    srcset="
+                      ./images/portfolio/portfolio-8.jpg    1x,
+                      ./images/portfolio/portfolio-8-2x.jpg 2x
+                    "
+                    src="./images/portfolio/portfolio-8.jpg"
+                    alt="Бірка"
                   />
                   <p class="portfolio__overlay">
                     Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
@@ -299,11 +322,14 @@
             <li class="portfolio__item">
               <a class="portfolio__link" href="">
                 <div class="portfolio__inner">
-                  <img 
-                  class="portfolio__img" 
-                  srcset="./images/portfolio/portfolio-9.jpg 1x, ./images/portfolio/portfolio-9-2x.jpg 2x"
-                  src="./images/portfolio/portfolio-9.jpg"
-                  alt="Бізнес"
+                  <img
+                    class="portfolio__img"
+                    srcset="
+                      ./images/portfolio/portfolio-9.jpg    1x,
+                      ./images/portfolio/portfolio-9-2x.jpg 2x
+                    "
+                    src="./images/portfolio/portfolio-9.jpg"
+                    alt="Бізнес"
                   />
                   <p class="portfolio__overlay">
                     Ресурс пропонує комплексні пропозиції з різним рівнем функціоналу та сервісів.
@@ -387,6 +413,12 @@
       </div>
     </footer>
     <script src="./js/modal.js"></script>
-    <script src="./js/mobile-menu.js"></script>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"
+    ></script>
+    <script defer src="./js/mobile-menu.js"></script>
   </body>
 </html>
