@@ -209,6 +209,7 @@ img {
   padding: 0;
   border: none;
   background-color: transparent;
+  cursor: pointer;
 }
 @media screen and (min-width: 768px) {
   .button__menu {
@@ -253,6 +254,7 @@ img {
 }
 
 .button__menu-close {
+  position: fixed;
   right: 25px;
   top: 21px;
   width: 40px;
@@ -260,6 +262,7 @@ img {
   padding: 0;
   border: none;
   background-color: transparent;
+  cursor: pointer;
 }
 @media screen and (min-width: 768px) {
   .button__menu-close {
@@ -886,6 +889,7 @@ img {
   .portfolio__overlay {
     font-size: 14px;
     padding: 30px 24px;
+    height: 100%;
   }
 }
 @media screen and (min-width: 480px) {
@@ -895,12 +899,12 @@ img {
 }
 @media screen and (min-width: 768px) {
   .portfolio__overlay {
-    padding: 49px 24px;
+    padding: 63px 24px;
   }
 }
 @media screen and (min-width: 1200px) {
   .portfolio__overlay {
-    padding: 63px 24px;
+    padding: 69px 24px;
   }
 }
 .portfolio__link:hover .portfolio__overlay {

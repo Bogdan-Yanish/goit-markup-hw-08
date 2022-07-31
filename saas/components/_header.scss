@@ -24,6 +24,7 @@
   padding: 0;
   border: none;
   background-color: transparent;
+  cursor: pointer;
 
   @include mq(tablet) {
     display: none;
@@ -70,6 +71,7 @@
 }
 
 .button__menu-close {
+  position: fixed;
   right: 25px;
   top: 21px;
   width: 40px;
@@ -79,6 +81,7 @@
 
   border: none;
   background-color: transparent;
+  cursor: pointer;
 
   @include mq(tablet) {
     display: none;

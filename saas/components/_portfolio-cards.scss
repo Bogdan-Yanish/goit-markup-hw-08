@@ -41,8 +41,6 @@
 
 .portfolio__img {
   width: 100%;
-  // object-fit: cover;
-  // height: 294px;
 }
 
 .portfolio__overlay {
@@ -62,6 +60,7 @@
   @media screen and (max-width: 479px) {
     font-size: 14px;
     padding: 30px 24px;
+    height: 100%;
   }
 
   @media screen and (min-width: 480px) {
@@ -69,11 +68,11 @@
   }
 
   @include mq(tablet) {
-    padding: 49px 24px;
+    padding: 63px 24px;
   }
 
   @include mq(desktop) {
-    padding: 63px 24px;
+    padding: 69px 24px;
   }
 
   .portfolio__link:hover & {
